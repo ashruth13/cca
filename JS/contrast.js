@@ -688,7 +688,7 @@ function initilizeWidget() {
           copyColor("Selected state","Adjacent",msg13);
           break; 
         case 14:
-          let msg14=""
+          let msg14="The above-mentioned icon element does not meet the required color contrast ratio of 3:1 with the background."
           copyColor("Icon","Adjacent background",msg14);
           break;  
         case 15:
