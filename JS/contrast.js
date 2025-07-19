@@ -636,67 +636,67 @@ function initilizeWidget() {
 
     switch (Number(document.getElementById('copyCriteria').value)) {
       case 1:
-          let msg = "The above-mentioned element lacks the required color contrast ratio of 4.5:1 with the background."
+          let msg = "The above-mentioned elements lack the required color contrast ratio of 4.5:1 with the background color."
           copyColor("Foreground text","Background",msg);
           break;
       case 2:
-        let msg2 = "The above-mentioned placeholder text lacks the required color contrast ratio of 4.5:1 with the background."
+        let msg2 = "The above-mentioned placeholder text lacks the required color contrast ratio of 4.5:1 with the background color."
           copyColor("Placeholder text","Background",msg2);
           break;
         case 3:
-          let msg3="The above-mentioned element on focus / hover lacks the required color contrast ratio of 4.5:1 with the background."
+          let msg3="The above-mentioned elements on focus / hover lacks the required color contrast ratio of 4.5:1 with the background color."
           copyColor("Link or button text","Background",msg3);
           break;
         case 4:
-          let msg4="The above-mentioned element lacks the required color contrast ratio of 4.5:1 with the gradient background."
+          let msg4="The above-mentioned elements lack the required color contrast ratio of 4.5:1 with the gradient background color."
           copyColor("Foreground text","Background (Gradient)",msg4);
           break;
         case 5:
-          let msg5="The above-mentioned element lacks the required color contrast ratio of 3:1 with the background."
+          let msg5="The above-mentioned elements lack the required color contrast ratio of 3:1 with the background color."
           copyColor("Foreground text","Background",msg5);
           break;
         case 6:
-          let msg6="The above-mentioned element on focus / hover lacks the required color contrast ratio of 3:1 with the background."
-          copyColor("Link or button text","Background",msg6);
+          let msg6="The above-mentioned elements on focus / hover lacks the required color contrast ratio of 3:1 with the background color."
+          copyColor("Link or Button text on focus / hover","Background",msg6);
           break;
         case 7:
-          let msg7="The above-mentioned element lacks the required color contrast ratio of 3:1 with the gradient background."
+          let msg7="The above-mentioned elements lack the required color contrast ratio of 3:1 with the gradient background."
           copyColor("Foreground text","Background (Gradient)",msg7);
           break;
         case 8:
-          let msg8 ="The focus indicator relies only on color and fails to meet the required color contrast ratio of 3:1 with the default color."
+          let msg8 ="The focus indicator relies only on background color change and fails to meet the required color contrast ratio of 3:1 with the default color."
           copyColor("Focus indicator","Default Element",msg8);
           break;
         case 9:
-          let msg9 ="It is important for a low-vision or color-blind user to know the visual boundary of an input element, as it makes it easy for the user to know where to interact. To let that happen, we need to have a 3:1 contrast ratio between the visual boundary color and its inner background. From the details above, we can see that the ratio is less than 3:1, making it difficult for the color-blind user to identify the interactive area of the input element."
+          let msg9 ="The visual boundary of the above-mentioned elements lacks the required color contrast ratio of 3:1 with the background color."
           copyColor("Visual boundary","Inner adjacent",msg9);
           break;
         case 10:
-          let msg10="It is important for a low-vision or color-blind user to know the visual boundary of an input element, as it makes it easy for the user to know where to interact. To let that happen, we need to have a 3:1 contrast ratio between the visual boundary color and its outer background. From the details above, we can see that the ratio is less than 3:1, making it difficult for the color-blind user to identify the interactive area of the input element."
+          let msg10="The visual boundary of the above-mentioned elements lacks the required color contrast ratio of 3:1 with the background color."
           copyColor("Visual boundary","Outer adjacent",msg10);
           break;
         case 11:
-          let msg11="When the visual focus indicator of an element is inside the component, it needs to have a contrast ratio of 3:1 at the minimum with its inner background. From the color codes below, we can see that the visual focus indicator is not meeting the minimum threshold for the contrast with its inner adjacent color, making it difficult for the colorblind and low-vision users to identify the focused element."
+          let msg11="The focus indicator for the above-mentioned elements lacks the required color contrast ratio of 3:1 with the background color."
           copyColor("Focus indicator","Inner adjacent",msg11);
           break;
         case 12:
-          let msg12="When the visual focus indicator of an element is inside the component, it needs to have a contrast ratio of 3:1 at the minimum with its outer background. From the color codes below, we can see that the visual focus indicator is not meeting the minimum threshold for the contrast with its inner adjacent color, making it difficult for the colorblind and low-vision users to identify the focused element."
+          let msg12="The focus indicator for the above-mentioned elements lacks the required color contrast ratio of 3:1 with the background color."
           copyColor("Focus indicator","Outer adjacent",msg12);
           break;  
         case 13:
-          let msg13="When the color contrast ratio of an interactive element's state with its background is less than 3:1, it becomes difficult for a color-blind or low-vision user to understand different states of the element."
+          let msg13="The selected state of the above-mentioned elements lacks the required color contrast ratio of 3:1 with the adjacent color."
           copyColor("Selected state","Adjacent",msg13);
           break; 
         case 14:
-          let msg14="The above-mentioned icon element does not meet the required color contrast ratio of 3:1 with the background."
+          let msg14=""
           copyColor("Icon","Adjacent background",msg14);
           break;  
         case 15:
-          let msg15 ="The above-mentioned graphical object fails to meet the required 3:1 color contrast ratio with the background, making it difficult for colorblind and low-vision users to perceive or understand its purpose."
+          let msg15 ="The above-mentioned graphical objects fail to meet the required 3:1 color contrast ratio with the background color."
           copyColor("Graphical object","Adjacent",msg15);
           break;  
         case 16:
-          let msg16="The above-mentioned link text does not meet the required 3:1 color contrast ratio with the adjacent text color. Since the link text is differentiated from the surrounding body text only by color, colorblind and low-vision users may miss these links."
+          let msg16="The link text for the above-mentioned elements lacks the required color contrast ratio of 3:1 with the adjacent text color."
           copyColor("Link text","Surrounding text",msg16);
           break;   
         case 17:
@@ -718,7 +718,7 @@ function initilizeWidget() {
 
     
    function copyColor (color1,color2,description){
-    let  myMessage = "\nElement Description: The following elements\n-\n\nElement Location:\n\nDescription of the issue: " + description + "\n\nContrast Details\n"+ color1 +" color: " + document.getElementById('orForeHex').value +"\n" + color2 +" color: " + document.getElementById('orBackHex').value + "\nContrast Ratio: " + document.getElementById('orRatio').innerText  
+    let  myMessage = "\nDescription of the issue: " + description + "\n\nContrast Details\n"+ color1 +" color: " + document.getElementById('orForeHex').value +"\n" + color2 +" color: " + document.getElementById('orBackHex').value + "\nContrast Ratio: " + document.getElementById('orRatio').innerText
     //let myMessag = "\nContrast Details\n"+ color1 +" color: " + document.getElementById('orForeHex').value +"\n" + color2 +" color: " + document.getElementById('orBackHex').value + "\nContrast Ratio: " + document.getElementById('orRatio').innerText + " \n\n" + description + " \n\n";
     navigator.clipboard.writeText(myMessage);
 
